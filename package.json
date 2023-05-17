@@ -1,0 +1,20 @@
+{
+  "name": "exercise_tracker",
+  "version": "1.0.0",
+  "description": "simple api costumer handling",
+  "main": "index.js",
+  "author": "Blonde Christophe",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node index.js",
+    "myStart": "npx nodemon index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.1.1"
+  }
+}

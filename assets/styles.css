@@ -1,0 +1,11 @@
+body {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 600;
+  text-align: center;
+  padding: 1em 0;
+}
