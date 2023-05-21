@@ -1,6 +1,7 @@
 body {
   max-width: 1350px;
   margin: 0 auto;
+  background-color: whitesmoke;
 }
 
 h1 {
@@ -8,4 +9,269 @@ h1 {
   font-weight: 600;
   text-align: center;
   padding: 1em 0;
+  color: darkblue;
+}
+h1 span {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+  color: rgb(230, 112, 3);
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  border: solid 2px red;
+  color: red;
+}
+
+/* Form User */
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+.user-form,
+.exercises-form {
+  width: 15em;
+  display: flex;
+  flex-direction: column;
+  border: solid 2px rgb(230, 112, 3);
+  border-radius: 1rem;
+  background-color: antiquewhite;
+  align-self: self-end;
+  margin: 0 1em;
+}
+.exercises-form {
+  border-color: darkblue;
+  background-color: lightblue;
+}
+.user-label,
+.exercises-label {
+  padding: 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1em;
+  background-color: wheat;
+  color: rgb(230, 112, 3);
+  border-bottom: solid 1px rgb(230, 112, 3);
+}
+.exercises-label {
+  border-color: darkblue;
+  color: darkblue;
+  background-color: lightsteelblue;
+}
+.user-input,
+.exercises-input {
+  padding: 0.3rem;
+  border: solid 1px rgb(230, 112, 3);
+  border-radius: 0.5rem;
+  outline: none;
+  margin: 0 1rem 0.8em 1rem;
+  font-size: 1.1rem;
+  text-indent: 0.5rem;
+}
+.exercises-input {
+  border-color: darkblue;
+}
+
+.user-input:focus,
+.search-input:focus {
+  background-color: beige;
+}
+.user-input::placeholder,
+.exercises-input::placeholder {
+  font-style: italic;
+  color: lightslategray;
+  text-indent: 0.5rem;
+}
+
+.user-submit,
+.exercises-submit {
+  width: 10em;
+  align-self: center;
+  border-radius: 50px;
+  border: solid 2px rgb(230, 112, 3);
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: wheat;
+  color: rgb(230, 112, 3);
+  box-shadow: 2px 2px 4px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.exercises-submit {
+  border-color: darkblue;
+  background-color: lightsteelblue;
+  color: darkblue;
+}
+.user-submit:hover {
+  background-color: rgb(230, 112, 3);
+  color: antiquewhite;
+}
+.exercises-submit:hover {
+  background-color: darkblue;
+  color: lightsteelblue;
+}
+/* Search Users */
+.list-container {
+  margin-top: 2em;
+}
+.search {
+  border: solid 2px rgb(230, 112, 3);
+  border-radius: 1rem;
+  width: 40em;
+  background-color: wheat;
+  padding: 0.5rem;
+  margin: 0 auto;
+}
+.logs {
+  border-color: darkblue;
+  background-color: lightblue;
+  margin-top: 3em;
+}
+.search-label {
+  color: rgb(230, 112, 3);
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 0 1em;
+  position: relative;
+}
+.logs-label {
+  color: darkblue;
+}
+.search-input {
+  margin-left: 1em;
+  padding: 0.5em;
+  font-size: 1.2rem;
+  outline: none;
+  border: 1px solid rgb(230, 112, 3);
+  border-radius: 0.5rem;
+  width: 18em;
+}
+.logs-input {
+  border-color: darkblue;
+  background-color: aliceblue;
+}
+.logs-input:focus,
+.exercises-input:focus,
+.filter-container input:focus {
+  background-color: azure;
+}
+.search-input::placeholder {
+  font-style: italic;
+  color: lightslategray;
+}
+.search-icon {
+  color: rgb(230, 112, 3);
+  font-size: 1.8rem;
+  top: -1px;
+  right: 1em;
+  position: absolute;
+  transition: all 400ms;
+  cursor: pointer;
+}
+.logs-icon {
+  color: darkblue;
+}
+.search-icon:hover {
+  color: wheat;
+}
+.logs-icon:hover {
+  color: lightblue;
+}
+
+.filter-container {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+.filter-container input {
+  background-color: aliceblue;
+  border: solid 1px darkblue;
+  border-radius: 10px;
+  outline: none;
+  padding: 0.3rem;
+}
+.filter-container input[type="number"] {
+  width: 2rem;
+}
+.limit-label span {
+  font-size: 0.8rem;
+}
+/* Users Results */
+
+.search-result-container {
+  border: solid 2px rgb(230, 112, 3);
+  border-radius: 1rem;
+  width: 40em;
+  padding: 1em;
+  margin: 2em auto;
+}
+.logs-container {
+  border-color: darkblue;
+}
+.search-result-legend {
+  margin-left: 2em;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-style: italic;
+  padding: 0 0.5rem;
+  color: rgb(230, 112, 3);
+}
+.logs-legend {
+  color: darkblue;
+}
+table {
+  width: 100%;
+  background-color: wheat;
+  border: solid 1px rgb(230, 112, 3);
+}
+.logs-container table {
+  border-color: darkblue;
+  background-color: lightsteelblue;
+}
+thead td {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(230, 112, 3);
+  width: 50%;
+  border-bottom: solid 1px rgb(230, 112, 3);
+}
+.logs-container thead td {
+  color: darkblue;
+  border-color: darkblue;
+}
+.logs-container td:not(:first-child) {
+  width: 25%;
+}
+thead td:first-child,
+.table-td:first-child {
+  border-right: solid 1px rgb(230, 112, 3);
+}
+.logs-container thead td:not(:last-child),
+.logs-container .table-td:not(:last-child) {
+  border-right: solid 1px darkblue;
+}
+
+.table-td {
+  background-color: antiquewhite;
+  text-indent: 1em;
+  padding: 0.5rem;
+  color: rgb(230, 112, 3);
+  font-size: 1.2rem;
+}
+.logs-container .table-td {
+  background-color: lightblue;
+  color: darkblue;
+}
+.logs-container .table-td:last-child {
+  font-size: 1rem;
 }

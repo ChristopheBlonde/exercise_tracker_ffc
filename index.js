@@ -37,7 +37,17 @@ app.post("/api/users", async (req, res) => {
 
 app.get("/api/users", async (req, res) => {
   try {
-    const userList = await User.find().select("username _id");
+    const { username } = req.query;
+    const filter = {};
+    if (username) {
+      const regExp = new RegExp(`${username}`, "i");
+      filter.username = regExp;
+    }
+
+    const userList = await User.find(filter)
+      .select("username _id")
+      .sort({ username: 1 });
+
     res.status(200).json(userList);
   } catch (error) {
     res.status(400).json({ error: error });

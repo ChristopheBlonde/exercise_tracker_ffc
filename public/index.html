@@ -6,10 +6,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/reset.css" />
     <link rel="stylesheet" href="../assets/styles.css" />
+    <link href="../assets/fonts/css/fontawesome.css" rel="stylesheet" />
+    <link href="../assets/fonts/css/solid.css" rel="stylesheet" />
+    <link href="../assets/fonts/css/brands.css" rel="stylesheet" />
+
     <script type="application/javascript" src="../assets/script.js"></script>
     <title>Exercise Tracker</title>
   </head>
   <body>
-    <h1>Exercise Tracker</h1>
+    <h1>Exercise Tracker <span>by Blonde Christophe</span></h1>
+    <div class="form-container">
+      <form id="user-form" class="user-form">
+        <label for="user-input" id="user-label" class="user-label">
+          Create a New User
+        </label>
+        <input
+          type="text"
+          id="user-input"
+          class="user-input"
+          placeholder="username"
+        />
+        <button type="submit" id="user-submit" class="user-submit">
+          Submit
+        </button>
+      </form>
+      <form id="exercises-form" class="exercises-form">
+        <label for="exercises" id="exercise-label" class="exercises-label"
+          >Add exercises</label
+        >
+        <input
+          type="text"
+          id="_id"
+          placeholder=":_id"
+          class="exercises-input"
+        />
+        <input
+          type="text"
+          id="description"
+          placeholder="description*"
+          class="exercises-input"
+        />
+        <input
+          type="text"
+          id="duration"
+          placeholder="duration* (mins.)"
+          class="exercises-input"
+        />
+        <input
+          type="text"
+          id="date"
+          placeholder="date (yyyy-mm-dd)"
+          class="exercises-input"
+        />
+        <button id="exercises-submit" class="exercises-submit">Submit</button>
+      </form>
+    </div>
+    <div class="list-container">
+      <div class="search">
+        <label for="search-input" id="search-label" class="search-label">
+          Search a user
+          <input
+            type="text"
+            id="search-input"
+            class="search-input"
+            placeholder="username"
+          />
+          <i
+            id="search-icon"
+            class="fa-solid fa-magnifying-glass search-icon"
+          ></i>
+        </label>
+      </div>
+      <div class="search logs">
+        <label
+          for="search-input"
+          id="search-label"
+          class="search-label logs-label"
+        >
+          Search User Logs
+          <input
+            type="text"
+            id="search-input-logs"
+            class="search-input logs-input"
+            placeholder="User's :_id"
+          />
+          <i
+            id="search-icon-logs"
+            class="fa-solid fa-magnifying-glass search-icon logs-icon"
+          ></i>
+        </label>
+        <div class="filter-container">
+          <label for="from" id="from-label" class="from-label">
+            From :
+            <input name="from" id="from" class="from" type="date" />
+          </label>
+          <label for="to" id="to-label" class="to-label">
+            To :
+            <input name="to" id="to" class="to" type="date" />
+          </label>
+          <label for="limit" id="limit-label" class="limit-label">
+            Limit :
+            <input
+              type="number"
+              min="1"
+              max="100"
+              name="limit"
+              id="limit"
+              class="limit"
+            />
+            <span>(min:1 max:100)</span>
+          </label>
+        </div>
+      </div>
+      <fieldset id="user-list" class="search-result-container hidden">
+        <legend id="search-result-legend" class="search-result-legend"></legend>
+        <table>
+          <thead>
+            <tr>
+              <td>Username</td>
+              <td>_id</td>
+            </tr>
+          </thead>
+          <tbody id="user-body" class="user-body"></tbody>
+        </table>
+      </fieldset>
+      <fieldset
+        id="logs-list"
+        class="search-result-container logs-container hidden"
+      >
+        <legend
+          id="search-result-legend-logs"
+          class="search-result-legend logs-legend"
+        ></legend>
+        <table>
+          <thead>
+            <tr>
+              <td>Description</td>
+              <td>Duration</td>
+              <td>Date</td>
+            </tr>
+          </thead>
+          <tbody id="logs-body" class="logs-body"></tbody>
+        </table>
+      </fieldset>
+    </div>
   </body>
 </html>
